@@ -1,0 +1,13 @@
+SiteName : test
+Server:
+  Https : false
+  HttpPort : 80
+  ReadTimeout : 60
+  WriteTimeout : 60
+
+Database:
+  Type : mysql
+  User : root
+  Password : 123
+  Host : 127.0.0.1:3306
+  Name : test
