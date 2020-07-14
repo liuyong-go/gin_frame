@@ -17,33 +17,9 @@ func main() {
 		WriteTimeout:   config.LoadConfig().Server.WriteTimeout,
 		MaxHeaderBytes: 1 << 20,
 	}
-	fmt.Print(config.LoadConfig().Server.ReadTimeout)
 	ln, err := net.Listen("tcp4", s.Addr)
 	if err != nil {
 		log.Printf("Server err: %v", err)
 	}
 	s.Serve(ln)
-}
-func main_bak() {
-	//监听协议
-	http.HandleFunc("/", HelloWorldHandler)
-	http.HandleFunc("/user/login", UserLoginHandler)
-	//监听服务
-	err := http.ListenAndServe(fmt.Sprintf(":%d", config.LoadConfig().Server.HttpPort), nil)
-
-	if err != nil {
-		fmt.Println("服务器错误")
-	}
-}
-func HelloWorldHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("r.Method = ", r.Method)
-	fmt.Println("r.URL = ", r.URL)
-	fmt.Println("r.Header = ", r.Header)
-	fmt.Println("r.Body = ", r.Body)
-	fmt.Fprintf(w, "HelloWorld!")
-}
-
-func UserLoginHandler(response http.ResponseWriter, request *http.Request) {
-	fmt.Println("Handler Hello")
-	fmt.Fprintf(response, "Login Success")
 }
