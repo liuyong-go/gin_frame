@@ -10,7 +10,7 @@ import (
 
 type Server struct {
 	Https        bool          `yaml:"Https"`
-	HttpPort     int8          `yaml:"HttpPort"`
+	HttpPort     int           `yaml:"HttpPort"`
 	ReadTimeout  time.Duration `yaml:"ReadTimeout"`
 	WriteTimeout time.Duration `yaml:"WriteTimeout"`
 }
@@ -22,6 +22,7 @@ type Database struct {
 	Name     string `yaml:"Name"`
 }
 type System struct {
+	RunMode  string   `yaml:"RunMode"`
 	SiteName string   `yaml:"SiteName"`
 	Server   Server   `yaml:"Server"`
 	Database Database `yaml:"Database"`

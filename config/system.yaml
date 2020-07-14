@@ -1,9 +1,10 @@
 SiteName : test
+RunMode : debug
 Server:
   Https : false
-  HttpPort : 80
-  ReadTimeout : 60
-  WriteTimeout : 60
+  HttpPort : 8080
+  ReadTimeout : 60000000000  #60s
+  WriteTimeout : 60000000000
 
 Database:
   Type : mysql
