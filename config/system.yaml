@@ -12,3 +12,8 @@ Database:
   Password : 123
   Host : 127.0.0.1:3306
   Name : cource
+
+Redis:
+  Addr : "localhost_test_env:6379"
+  Password : ""
+  Db : 0

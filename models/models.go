@@ -19,7 +19,6 @@ type Model struct {
 
 func init() {
 	var err error
-	fmt.Print("init db")
 	db, err = gorm.Open(config.LoadConfig().Database.Type, fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8&parseTime=True&loc=Local",
 		config.LoadConfig().Database.User,
 		config.LoadConfig().Database.Password,

@@ -21,11 +21,17 @@ type Database struct {
 	Host     string `yaml:"Host"`
 	Name     string `yaml:"Name"`
 }
+type Redis struct {
+	Addr     string `yaml:"Addr"`
+	Password string `yaml:"Password"`
+	Db       int    `yaml:"Db"`
+}
 type System struct {
 	RunMode  string   `yaml:"RunMode"`
 	SiteName string   `yaml:"SiteName"`
 	Server   Server   `yaml:"Server"`
 	Database Database `yaml:"Database"`
+	Redis    Redis    `yaml:"Redis"`
 }
 
 var Setting System
