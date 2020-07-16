@@ -14,6 +14,9 @@ Database:
   Name : cource
 
 Redis:
-  Addr : "localhost_test_env:6379"
-  Password : "liuyong@redis"
+  Addr : localhost_test_env:6379
+  Password : liuyong@redis
   Db : 0
+Etcd:
+  Endpoints:
+    - localhost_test_env:2379

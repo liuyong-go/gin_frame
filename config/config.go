@@ -26,12 +26,16 @@ type Redis struct {
 	Password string `yaml:"Password"`
 	Db       int    `yaml:"Db"`
 }
+type Etcd struct {
+	Endpoints []string `yaml:"Endpoints"`
+}
 type System struct {
 	RunMode  string   `yaml:"RunMode"`
 	SiteName string   `yaml:"SiteName"`
 	Server   Server   `yaml:"Server"`
 	Database Database `yaml:"Database"`
 	Redis    Redis    `yaml:"Redis"`
+	Etcd     Etcd     `yaml:"Etcd"`
 }
 
 var Setting System
