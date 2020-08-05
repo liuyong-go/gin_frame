@@ -16,7 +16,7 @@ func HelloWorld(c *gin.Context) {
 	time.Sleep(10 * time.Second)
 	c.JSON(http.StatusOK, gin.H{
 		"code": 200,
-		"msg":  "请求成功",
+		"msg":  "请求成功1",
 		"data": result,
 	})
 	return
