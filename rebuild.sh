@@ -1,0 +1,1 @@
+ssh aliyun "/var/www/gin_frame/restart.sh"

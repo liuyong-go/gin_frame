@@ -24,7 +24,7 @@ import (
 // 	}
 // 	s.Serve(ln)
 // }
-//kill -1 pid 热重启
+//kill -1 pid 热重启 kill -1 $(lsof -i:8080 |awk '{print $2}' | tail -n 1)
 func main() {
 	endless.DefaultReadTimeOut = config.LoadConfig().Server.ReadTimeout
 	endless.DefaultWriteTimeOut = config.LoadConfig().Server.WriteTimeout
