@@ -12,5 +12,6 @@ func InitRouter() *gin.Engine {
 	r.Use(gin.Recovery())
 	gin.SetMode(config.LoadConfig().RunMode)
 	r.GET("hello", controllers.HelloWorld)
+	r.GET("test", controllers.TestHello)
 	return r
 }
