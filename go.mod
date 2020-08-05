@@ -11,7 +11,7 @@ require (
 	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
-	github.com/fvbock/endless v0.0.0-20170109170031-447134032cb6 // indirect
+	github.com/fvbock/endless v0.0.0-20170109170031-447134032cb6
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-redis/redis v6.15.8+incompatible
 	github.com/go-redis/redis/v8 v8.0.0-beta.6 // indirect

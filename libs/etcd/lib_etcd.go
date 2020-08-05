@@ -56,6 +56,8 @@ func GetLock(key string, expire int64, maxLeaseCount int) bool {
 	var leaseId = resp.ID
 	ctx, cancelFunc := context.WithCancel(context.TODO())
 	if leaseKeepAliveChan, err = lease.KeepAlive(ctx, leaseId); err != nil {
+		cancelFunc() //取消续租
+		lease.Revoke(context.TODO(), leaseId)
 		return false
 	}
 
