@@ -102,12 +102,17 @@ func TestLock(t *testing.T) {
 //go test -v -run TestElastic run_test.go
 func TestElastic(t *testing.T) {
 	//var els = libs_elastic.Elas
-	var content = `{"title":"test","name":"liuyong","content":"test hello elasticsearch"}`
-	libs_elastic.CreateDocument("test", content)
+	var con = map[string]interface{}{
+		"title":   "maptest",
+		"company": "soyoung",
+		"content": "soyoung test 2",
+	}
+	// var content = `{"title":"test","name":"liuyong","content":"test hello elasticsearch"}`
+	libs_elastic.CreateDocument("test", con)
 	query := map[string]interface{}{
 		"query": map[string]interface{}{
 			"match": map[string]interface{}{
-				"content": "hello",
+				"content": "test",
 			},
 		},
 	}

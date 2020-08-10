@@ -30,7 +30,9 @@ func init() {
 }
 
 //CreateDocument 创建文档
-func CreateDocument(index string, content string) {
+func CreateDocument(index string, text map[string]interface{}) {
+	mjson, _ := json.Marshal(text)
+	var content = string(mjson)
 	req := esapi.IndexRequest{
 		Index: index,
 		// DocumentID: documentID,
