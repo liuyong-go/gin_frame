@@ -3,6 +3,7 @@ package test
 import (
 	"context"
 	"fmt"
+	libs_elastic "gin_frame/libs/elastic"
 	libs_etcd "gin_frame/libs/etcd"
 	libs_redis "gin_frame/libs/redis"
 	"runtime"
@@ -96,4 +97,19 @@ func TestLock(t *testing.T) {
 		fmt.Print("加锁失败")
 	}
 	time.Sleep(20 * time.Second)
+}
+
+//go test -v -run TestElastic run_test.go
+func TestElastic(t *testing.T) {
+	//var els = libs_elastic.Elas
+	var content = `{"title":"test","name":"liuyong","content":"test hello elasticsearch"}`
+	libs_elastic.CreateDocument("test", content)
+	query := map[string]interface{}{
+		"query": map[string]interface{}{
+			"match": map[string]interface{}{
+				"content": "hello",
+			},
+		},
+	}
+	libs_elastic.Search(query, "test")
 }

@@ -20,3 +20,8 @@ Redis:
 Etcd:
   Endpoints:
     - localhost_test_env:2379
+Elastic:
+  Addr: 
+    - http://127.0.0.1:9200
+  Username : ""
+  Password : ""

@@ -11,6 +11,9 @@ require (
 	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
+	github.com/elastic/go-elasticsearch/v7 v7.8.0
+	github.com/elastic/go-elasticsearch/v8 v8.0.0-20200728144331-527225d8e836
+	github.com/fortytw2/leaktest v1.3.0 // indirect
 	github.com/fvbock/endless v0.0.0-20170109170031-447134032cb6
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-redis/redis v6.15.8+incompatible
@@ -25,6 +28,9 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway v1.14.6 // indirect
 	github.com/jinzhu/gorm v1.9.14
 	github.com/jonboulle/clockwork v0.2.0 // indirect
+	github.com/mailru/easyjson v0.7.2 // indirect
+	github.com/olivere/elastic v6.2.34+incompatible
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/prometheus/client_golang v1.7.1 // indirect
 	github.com/soheilhy/cmux v0.1.4 // indirect
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20200427203606-3cfed13b9966 // indirect
