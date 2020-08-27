@@ -6,6 +6,7 @@ import (
 	libs_elastic "gin_frame/libs/elastic"
 	libs_etcd "gin_frame/libs/etcd"
 	libs_redis "gin_frame/libs/redis"
+	libs_short "gin_frame/libs/shortUrl"
 	"runtime"
 	"strconv"
 	"strings"
@@ -117,4 +118,10 @@ func TestElastic(t *testing.T) {
 		},
 	}
 	libs_elastic.Search(query, "test")
+}
+func TestShortUrl(t *testing.T) {
+	var url = "https://synewad.xinyangwang.net/v2/syshare/product"
+	var shortURL = libs_short.CreateShortURL(url)
+	fmt.Print("surl:" + shortURL + "end")
+
 }

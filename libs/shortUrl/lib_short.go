@@ -128,8 +128,8 @@ func TenToSixTwo(num int64) string {
 		var result byte
 		var tmp []byte
 
-		number := num % 62                   // 100%62 = 38
-		result = []byte(tenToAny[number])[0] // C
+		number := num % 62 // 100%62 = 38
+		result = []byte(tenToAny[number])[0]
 
 		// 临时变量，为了追加到头部
 		tmp = append(tmp, result)
@@ -151,8 +151,16 @@ func init() {
 
 //CreateShortURL 生成短链接
 func CreateShortURL(lurl string) (surl string) {
-
+	var byteURL = []byte(lurl)
+	var intValue int64
+	intValue = abs(murmurHash64A(byteURL))
+	//surl = strconv.FormatInt(intValue, 36)
+	surl = TenToSixTwo(intValue)
 	return
+}
+func abs(n int64) int64 {
+	y := n >> 63
+	return (n ^ y) - y
 }
 
 //GetURL 根据短链接获取长链接
