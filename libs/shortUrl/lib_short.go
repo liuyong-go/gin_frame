@@ -154,7 +154,6 @@ func CreateShortURL(lurl string) (surl string) {
 	var byteURL = []byte(lurl)
 	var intValue int64
 	intValue = abs(murmurHash64A(byteURL))
-	//surl = strconv.FormatInt(intValue, 36)
 	surl = TenToSixTwo(intValue)
 	return
 }
